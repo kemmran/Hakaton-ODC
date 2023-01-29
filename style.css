@@ -284,6 +284,7 @@ header{
 }
 
 .team .card-text{
+    display: flex;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
