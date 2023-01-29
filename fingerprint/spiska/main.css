@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  background-image: url("Medical.jpg");
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000000000000;
+  height: 3rem;
+}
+
+.menu {
+  max-width: 72rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+.logo {
+  width: 150px;
+  height: 150%;
+  object-fit: cover;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.hamburger-menu {
+  height: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 1.9rem;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #eee;
+  transition: 0.5s;
+  position: relative;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #eee;
+  transition: 0.5s;
+}
+
+.bar:before {
+  transform: translateY(-9px);
+}
+
+.bar:after {
+  transform: translateY(9px);
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+header {
+  min-height: 100vh;
+  width: 100%;
+  background: url("bg.jpg") no-repeat top center / cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('Medical.jpg') no-repeat top center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	background: linear-gradient(transparent,rgba(242, 236, 236, 0.363));
+}
+
+.login_prof{
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  border-radius: 14px;
+  background: rgb(255,251,251);
+  background: linear-gradient(90deg, rgba(255,251,251,0.6839110644257703) 9%, rgba(104,237,236,0.6250875350140056) 78%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column ;
+  /* box-shadow: 10px 5px 5px 5px rgb(255, 255, 255); */
+  /* box-shadow: 3px 3px red, -1em 0 0.4em olive; */
+  box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, 0.2);
+
+}
+.login_prof_card_1{
+  width: 85%;
+  height: 42%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+.login_prof_card_2{
+  width: 85%;
+  height: 42%;
+  /* border: 1px solid black; */
+  background-color: #fff;
+  border-radius: 8px;
+}
+.login_prof_card_1 img{
+  width: 276px;
+  height: 276px;
+  border-radius: 50%;
+  object-fit: cover ;
+  /* box-shadow: 12px 12px 2px 1px rgba(255, 254, 254, 0.464);   */
+}
+.login_prof_card_1 .box{
+  width: 400px;
+  height: 330px;
+  /* border: 1px solid black; */
+}
+.text-1{
+  font-family: 'Play', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+}
+.text_2{
+  font-family: 'Play', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 150px;
+}
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.container.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+.container.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}
+.container.active .main {
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+.links {
+  position: absolute;
+  width: 30%;
+  right: 60px;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar1 {
+  display: block;
+  position: absolute;
+  list-style: none;
+  top: 40px;
+  left: 0px;
+}
+.navbar1 .a1, .a2, .a3, .a4, .a5, .a6{
+  position: relative;
+  top: 130px;
+  left: 140px;
+  text-shadow: 0 0 10px #000000;
+}
+
+.links a {
+  text-decoration: none;
+  color: #21ebff;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.links a:hover {
+  color: #fff;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+.container.active .links a {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+}
+
+.shadow.one {
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.shadow.two {
+  z-index: -2;
+  opacity: 0.1;
+}
+
+.container.active .shadow.one {
+  animation: shadow-one 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+.container.active .shadow.two {
+  animation: shadow-two 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+.container.active .main:hover + .shadow.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+}
+
+.container.active .main:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+
+@media(max-width:760px){
+.navbar1 {
+    display: block;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    top: 450px;
+    left: 60px;
+}
+.navbar1 .a1{
+  display: block;
+  position: absolute;
+  top: -180px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+    font-size: 1rem;
+}
+.navbar1 .a2{
+  display: block;
+  position: absolute;
+  top: -145px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+    font-size: 1rem;
+}
+.navbar1 .a3{
+  display: block;
+  position: absolute;
+  top: -110px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+    font-size: 1rem;
+}
+.navbar1 .a4{
+  display: block;
+  position: absolute;
+  top: -75px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+    font-size: 1rem;
+}
+.navbar1 .a5{
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+    font-size: 1rem;
+}
+.navbar1 .a6{
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -345px;
+  z-index: 10000000000000000;
+  width: 400px;
+  background: #292b2c00;
+  backdrop-filter: blur(30px);
+  font-size: 1rem;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(https://get.wallhere.com/photo/abstract-text-blue-pattern-texture-circle-shape-design-line-2560x1600-px-computer-wallpaper-font-719195.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
